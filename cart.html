@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <title>Kevin Kessler II  Final Project Cart</title>
+	<link href="layout.css" type="text/css" rel="stylesheet">
+	
+<script src="cart-functions.js"></script>    
+<script src="name-functions.js"></script>
+<script src="other-functions.js"></script>
+
+<script>
+window.onload=function(){
+	CreatePageHeader();
+	DisplayName();
+	DisplayCartSummary(); 
+    DisplayCartDetails();
+    CreatePageFooter();
+}
+</script> 
+		
+</head>
+
+<body>
+<header id="pageHeader"></header>
+<nav>
+<form id="form1" name="form1" method="post">
+<p>Choose a page to visit:<br>
+  <select name="select" id="select" onchange="">
+    <option value="index.html">Home</option>
+    <option value="shop.html">Shop</option>
+    <option value="cart.html" selected="selected">Cart</option>
+ 	<option value="checkout.html">Checkout</option>
+  </select>
+</p>
+</form>
+
+<p>&nbsp;</p>
+    
+<div id="divGuestArea">&nbsp;</div>
+<div id="welcome"></div>
+<br>
+<button onclick="ContinueShopping()">Return to Store</button>
+
+<div id="cartSummary">&nbsp;</div>
+</nav>
+
+<div id="main">
+<h1>Cart</h1>
+<p>Below is the current contents of your shopping cart:</p>
+
+<div id="cartDetails"></div>
+
+
+<footer id="pageFooter">
+</footer>
+</div>
+</body>
+</html>
+

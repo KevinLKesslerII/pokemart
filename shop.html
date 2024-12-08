@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <title>Kevin Kessler II  Final Project Shop</title>
+	<link href="layout.css" type="text/css" rel="stylesheet">
+	
+<style>
+.quantity { 
+	width: 55px; 
+}
+</style>
+
+<script src="cart-functions.js"></script>    
+<script src="name-functions.js"></script>
+<script src="other-functions.js"></script>	
+
+<script>
+window.onload=function() {
+    CreatePageHeader();
+	DisplayName();
+	DisplayCartSummary(); 
+    CreateProductsTable();
+    CreatePageFooter();
+}
+</script>  
+
+		
+</head>
+
+<body>
+<header id="pageHeader"></header>
+<nav>
+
+ <p>&nbsp;</p>
+    <form>
+  <p>Choose a page to visit:<br>
+  <select name="select" id="select" onchange="location.href=this.value">
+    <option value="index.html">Home</option>
+    <option value="shop.html" selected="selected">Shop</option>
+    <option value="cart.html">Cart</option>
+    <option value="checkout.html">Checkout</option>
+  </select>
+      </p>
+      </form>
+  
+<div id="welcome"></div>
+    
+<div id="cartSummary"></div>
+</nav>
+
+<div id="main">
+<h1>Shop</h1>
+<p>We do a monthly survey on what the top purchases are for trainers, vets and newcomers alike!! Our top sellers this month according to YOU are:</p>
+    
+<div id="ProductsTable"></div>
+<div id="cartButtons">
+    <button onclick="ClearCart()">Clear Cart</button>
+    <button onclick="ProceedToCart()">Proceed to Cart</button>
+</div>
+    
+<footer id="pageFooter"></footer>
+</div>
+</body>
+</html>
+

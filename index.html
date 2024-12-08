@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>YOUR NAME  Final Project Home</title>
+	<link href="layout.css" rel="stylesheet">
+    
+<script src="cart-functions.js"></script>    
+<script src="name-functions.js"></script>
+<script src="other-functions.js"></script>	
+
+<script>
+window.onload=function(){
+    CreatePageHeader();
+	DisplayName();
+	DisplayCartSummary(); 
+    CreatePageFooter();
+}
+</script>    
+		
+</head>
+
+<body>
+<header id="pageHeader"></header>
+<nav>
+<form id="form1" name="form1" method="post">
+<p>Choose a page to visit:<br>
+  <select name="select" id="select" onchange="location.href=this.value">
+    <option value="index.html" selected="selected">Home</option>
+    <option value="shop.html">Shop</option>
+    <option value="cart.html">Cart</option>
+ 	<option value="checkout.html">Checkout</option>
+  </select>
+</p>
+</form>
+ <p>&nbsp;</p>
+    
+<div id="welcome"></div>
+    
+<div id="cartSummary"></div>
+</nav>
+
+<div id="main">
+<h1>Home</h1>
+<p> Calling all Trainers! Whether you're just starting your Pokémon journey or you're a seasoned Champion looking to upgrade your gear, the Silph Co. Poké Ball Depot, a branch of PokeMart, is your ultimate destination. We're more than just a store – we're the launching pad for your next great adventure!!</p>
+<p>
+<img src="poke_mart.jpg" class="pokemart-photo" width="200" height="200" alt="Pokemart Logo" />Our Poké Ball Depot isn't just a place to buy Poké Balls; it's a haven for Trainers of all levels. We stock a wide range of models to suit every need and budget:
+<br><b>Our shop rotates between the following:</b>
+<br><b>Everyday Essentials:</b> Stock up on standard Poké Balls, Great Balls, and Ultra Balls for your daily catches.
+<br><b>Specialized Models:</b> Discover unique options like the Dusk Ball, Quick Ball, and Timer Ball, each designed to excel in specific situations.
+<br><b>Luxury and Collector's Items:</b> Indulge in premium Poké Balls like the Luxury Ball and the elusive Master Ball, the ultimate symbol of a Trainer's skill.
+</p>
+<h2>Our History</h2>
+<p>We've been at the forefront of Poké Ball technology since the very beginning, pioneering new designs and materials that have revolutionized the way Trainers interact with Pokémon. Our research teams tirelessly explore new frontiers, pushing the boundaries of what's possible. From the classic Poké Ball to the cutting-edge Master Ball, each one is a testament to our dedication to excellence and our unwavering passion for the Pokémon universe.</p>
+    <h2>About Us</h2>
+<p>At Silph Co., we live and breathe Pokémon. We know that the thrill of the catch, the bond formed with your team, and the memories made along the way are what make being a Trainer truly special. That's why we pour our heart and soul into crafting the most reliable, durable, and innovative Poké Balls in the world.</p>
+<footer id="pageFooter"></footer>
+</div>
+</body>
+</html>
+

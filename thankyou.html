@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Kevin Kessler II Final Project Thank You</title>
+	<link href="layout.css" rel="stylesheet">
+    
+<script src="cart-functions.js"></script>    
+<script src="name-functions.js"></script>
+<script src="other-functions.js"></script>	
+
+<script>
+window.onload=function(){
+    CreatePageHeader();
+	DisplayName();
+	DisplayCartSummary(); 
+    CreatePageFooter();
+
+    const fullNameSpan = document.getElementById("fullName");
+    const savedName = localStorage.getItem("customerName");
+
+    fullNameSpan.textContent = savedName || "Guest"; // Display saved name or "Guest"
+}
+</script>    
+		
+</head>
+
+<body>
+<header id="pageHeader"></header>
+<nav>
+<form id="form1" name="form1" method="post">
+<p>Choose a page to visit:<br>
+  <select name="select" id="select" onchange="location.href=this.value">
+    <option value="index.html" selected="selected">Home</option>
+    <option value="shop.html">Shop</option>
+    <option value="cart.html">Cart</option>
+ 	<option value="checkout.html">Checkout</option>
+  </select>
+</p>
+</form>
+ <p>&nbsp;</p>
+    
+<div id="welcome"></div>
+    
+<div id="cartSummary"></div>
+</nav>
+
+<div id="main">
+    <h1>Thank You, <span id="fullName"></span>!</h1>
+<p>Thank you so much from buying from us!!</p>
+<p>We appreciate your business and thank you for choosing us for all of your PokeBall needs!</p>
+<p>We hope to see you again soon and always remember that Silph Co. wants you to be the very best! (like no one ever was) </p>
+<footer id="pageFooter"></footer>
+</html>
+

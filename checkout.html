@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <title>Kevin Kessler II Final Project Checkout</title>
+	<link href="layout.css" type="text/css" rel="stylesheet">
+	
+<script src="cart-functions.js"></script>    
+<script src="name-functions.js"></script>
+<script src="other-functions.js"></script>
+
+<script>
+window.onload=function(){
+	CreatePageHeader();
+	DisplayName();
+    DisplayCartSummary();
+    DisplayCartSummaryAtCheckout();
+    DisplayCartDetails();
+    PreFillShippingName();
+    CreatePageFooter();
+}
+</script> 
+
+</head>
+
+<body>
+<header id="pageHeader"></header>
+<nav>
+    <form id="form1" name="form1" method="post">
+        <p>
+            Choose a page to visit:<br>
+            <select name="select" id="select" onchange="">
+                <option value="index.html">Home</option>
+                <option value="shop.html">Shop</option>
+                <option value="cart.html">Cart</option>
+                <option value="checkout.html" selected="selected">Checkout</option>
+            </select>
+        </p>
+    </form>
+
+    <p>&nbsp;</p>
+
+    <div id="divGuestArea">&nbsp;</div>
+    <div id="welcome"></div>
+    <br>
+    <button onclick="ContinueShopping()">Return to Store</button>
+
+    <div id="cartSummary">&nbsp;</div>
+
+</nav>
+
+<div id="main">
+
+    <h1>Checkout</h1>
+
+    <div id="cartSummaryCheckout"></div>
+    <div id="cartDetails"></div>
+    <br>
+    <fieldset id="shippingOptions">
+        <legend>Shipping Options:</legend>
+        <div class="shippingOption">
+            <input type="radio" id="shippingOption1" name="shipping" value="0" checked>
+            <label for="shippingOption1">No Shipping (Free)</label>
+        </div>
+        <div class="shippingOption">
+            <input type="radio" id="shippingOption2" name="shipping" value="2">
+            <label for="shippingOption2">Standard Shipping ($2.00)</label>
+        </div>
+        <div class="shippingOption">
+            <input type="radio" id="shippingOption3" name="shipping" value="5">
+            <label for="shippingOption3">2-Day Shipping ($5.00)</label>
+        </div>
+        <div class="shippingOption">
+            <input type="radio" id="shippingOption4" name="shipping" value="8">
+            <label for="shippingOption2">Overnight Shipping ($8.00)</label>
+        </div>
+    </fieldset>
+    <br>
+    <fieldset id="shippingAddress">
+        <legend>Shipping Address:</legend>
+        <form onsubmit="return ValidateCheckout();">
+            <div>
+                <label for="fullname">Name:</label>
+                <input type="text" id="fullname" name="fullname">
+
+                <label for="streetAddress">Street Address:</label>
+                <input type="text" id="streetAddress" name="streetAddress">
+            </div>
+            <br>
+            <div>
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city">
+
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state">
+            </div>
+            <br><div>
+                <label for="zip">Zip:</label>
+                <input type="text" id="zip" name="zip">
+
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country"
+            </div>
+        </form>
+    </fieldset>
+    <br>
+    <div>
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber">
+        <span id="phoneFormatHint" style="font-weight: normal;">Use "123-456-7890" format.</span>
+    </div>
+    <br>
+    <fieldset id="paymentInfo">
+        <legend>Payment Details</legend>
+        <div>
+            <label for="paymentType">Payment Type:</label>
+            <select id="paymentType" name="paymentType">
+                <option value="Visa">Visa Credit</option>
+                <option value="Mastercard">MasterCard Credit</option>
+                <option value="Amex">American Express Credit</option>
+                <option value="Debit">Debit Card</option>
+                <option value="Paypal">Pay Pal</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+            <label for="cardNo">Card #:</label>
+            <input type="text" id="cardNo" name="cardNo">
+            <span id="cardFormatHint" style="font-weight: normal;">Use "012345678910" format.</span>
+        </div>
+        <br>
+        <div id="cardMonth/Year">
+            <label for="month">Expiration Month:</label>
+            <select id="month" name="month">
+                <option value="jan">January</option>
+                <option value="feb">February</option>
+                <option value="mar">March</option>
+                <option value="apr">April</option>
+                <option value="may">May</option>
+                <option value="jun">June</option>
+                <option value="jul">July</option>
+                <option value="aug">August</option>
+                <option value="sep">September</option>
+                <option value="oct">October</option>
+                <option value="nov">November</option>
+                <option value="dec">December</option>
+            </select>
+            <label for="year">Expiration Year:</label>
+            <select id="year" name="year">
+                <option value="year1">2025</option>
+                <option value="year2">2026</option>
+                <option value="year3">2027</option>
+                <option value="year4">2028</option>
+                <option value="year5">2029</option>
+            </select>
+        </div>
+    </fieldset>
+    <br>
+    <button onclick="ValidateCheckout()">Complete Payment</button>
+    </form>
+
+    <footer id="pageFooter"></footer>
+</div>
+</body>
+</html>

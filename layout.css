@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+/*
+ Styles for Final Project Layout
+*/
+
+header {
+	height : 150px; 
+}   
+
+nav {
+	width : 200px;  
+	float : left;   
+	height: 750px;  
+	text-align: center;
+}
+
+#main {
+	margin-left: 200px; 
+}
+
+footer {
+	margin-top: 50px; 
+}
+
+.co-photo {
+	float: left;
+	margin: 10px 20px 10px 0px;
+	border: 1px black solid; 
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	border: 1px solid black;
+	padding: 8px;
+}
+
+shippingAddress {
+	display: flex; /* Enable flexbox layout */
+	gap: 10px; /*/ Add spacing between labels */
+}
+
+#ProductsTable button {
+	background: none; /* Remove default background */
+	border: 1px; /* Remove default border */
+	padding: 5px; /* Remove default padding */
+	cursor: pointer; /* Add pointer cursor on hover */
+	display: flex; /* Enable flexbox for centering */
+	justify-content: center; /* Horizontally center the content */
+	align-items: center; /* Vertically center the content */
+	width: auto; /* Allow button to grow to fit content */
+	height: auto; /* Allow button to grow to fit content */
+}
+
+.cart-summary-table {
+	width: 100%;
+	
+}
+
+.cart-summary-table th, .cart-summary-table td {
+	border-bottom: 1px solid #ddd;
+	text-align: left;
+	padding: 8px;
+}
+
+/* Style the table header cells */
+.cart-summary-table th {
+	background-color: #f2f2f2;
+}
+
+/* Style the "total" cells in the table */
+.cart-summary-table .product-total {
+	text-align: right; /* Align product totals to the right */
+}
+
+/* Summary row styling */
+.cart-summary-table .summary-row td {
+	font-weight: bold;
+}
+
+/* Adjust quantity header width */
+.quantity-header {
+	width: 60px;
+}
+
+.cart-summary-table th {
+	background-color: #f2f2f2;
+}
+
+/* Style the "total" cells in the table */
+.cart-summary-table .product-total {
+	text-align: right; /* Align totals to the right */
+}
+
+/* Summary row styling */
+.cart-summary-table .summary-row td {
+	font-weight: bold;
+}
+
+/* Adjust quantity header width */
+.quantity-header {
+	width: 60px;
+}
+
+.cart-summary-table th {
+	background-color: #f2f2f2;
+}
+
+/* Style the "total" cells in the table */
+.cart-summary-table .product-total {
+	text-align: right; /* Align totals to the right */
+}
+
+
+/* Style the empty cart message */
+#cartSummaryCheckout p {
+	margin: 0;
+	padding: 0;
+}
+
+#cartSummaryCheckout p:first-child {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+body {
+	background-color: #F5F5DC; /* Beige */
+}
